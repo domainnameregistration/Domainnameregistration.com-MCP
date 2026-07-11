@@ -1,0 +1,34 @@
+{
+  "name": "domain-availability-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server for fast, token-efficient bulk domain name search.",
+  "license": "Apache-2.0",
+  "bin": {
+    "domain-availability-mcp": "dist/stdio.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "dev:stdio": "tsx watch src/stdio.ts",
+    "start": "node dist/index.js",
+    "start:stdio": "node dist/stdio.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "express": "^5.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.10",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
